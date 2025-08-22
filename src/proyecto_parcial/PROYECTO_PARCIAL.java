@@ -13,7 +13,7 @@ public class PROYECTO_PARCIAL {
     public static void main(String[] args) {
         //variables
         String empleado;
-        double ht,th,sb,d,sn;
+        double ht,th,sb,d,sn,ess;
         //creando las lecturas
         Scanner lectura=new Scanner(System.in);
         //Entrada de datos
@@ -26,10 +26,12 @@ public class PROYECTO_PARCIAL {
         //procesos
         sb=ht*th;
         d=sb*0.13;
-        sn= sb-d;
+        ess=sb*0.09;    
+        sn= sb-(d+ess);
         //salida
         System.out.println("El sueldo bruto de "+empleado+" es de: "+sb);
         System.out.println("El descuento aplicado es: "+d);
+        System.out.println("El seguro de salud es: "+ess);
         System.out.println("El sueldo neto de "+empleado+" es de :"+sn);
         
     }
